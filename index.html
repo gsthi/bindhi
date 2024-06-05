@@ -1,0 +1,253 @@
+        <!DOCTYPE html><html lang="en"><head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>BIND LORE</title>
+        <style>
+            body {
+                background-color: #121212;
+                color: #fff;
+                font-family: Arial, sans-serif;
+                text-align: center;
+                cursor: none;
+                overflow-x: hidden;
+            }
+
+            .container {
+                max-width: 800px;
+                margin: 0 auto;
+                padding: 20px;
+            }
+
+            .media-frame {
+                display: block;
+                padding: 15px;
+                border: 2px solid #fff;
+                margin: 25px auto;
+                background-color: #222;
+                box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+                max-width: 450px;
+            }
+
+            img,
+            video {
+                max-width: 100%;
+                height: auto;
+            }
+
+            .caption {
+                margin-top: 10px;
+                font-size: 14px;
+                color: #ccc;
+            }
+
+            .cursor {
+                position: fixed;
+                width: 50px;
+                height: 50px;
+                background-image: url('bindcmon.png');
+                background-size: cover;
+                pointer-events: none;
+                z-index: 9999;
+                transition: transform 0.3s ease;
+            }
+
+            .cursor.large {
+                transform: scale(1.2);
+            }
+
+            .intro {
+                max-width: 800px;
+                margin: 0 auto;
+                padding: 20px;
+                text-align: left;
+                background-color: #333;
+                border-radius: 5px;
+                box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+            }
+
+            a {
+                color: white;
+            }
+
+            .snow {
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                pointer-events: none;
+                z-index: 9998;
+            }
+
+            .snowFlake {
+                position: absolute;
+                width: 50px;
+                height: 50px;
+                background-image: url('bindcmon.png');
+                background-size: cover;
+                animation: fall 8s linear infinite;
+            }
+
+            @keyframes fall {
+                from {
+                    transform: translate3d(var(--x), -50px, 0);
+                }
+                to {
+                    transform: translate3d(var(--x), calc(100vh + 50px), 0);
+                }
+            }
+        </style>
+    </head>
+    <body>
+
+        <audio controls="" autoplay="">
+            <source src="media/lol.mp3" type="audio/mpeg">
+        </audio>
+
+        <h1>BIND LORE</h1>
+        <div class="intro">
+            Hi welcome to the offical lore page for aidan purvis aka bind, this is a public archive with stuff about bind, to IRL pictures &amp; funny memes of bind,</p>
+
+            <p>bind is a weirdo who lives in a council estate and sits on discord all he chooses discord over cleaning his room and socializing he also likes to join newgen extortion groups like kaskar and sr1 to feel "harmful" he is not this he is a pathetic loser.</p>
+
+            <p>bind aka Aidan Purvis also likes to keep cp on pc and distribute it online over discord not only that he has been ratted multiple times and had his mothers card rinsed LMAO.</p>
+
+            <p>Note to bind: This will stay up for everyone to see that You're a loser and a reject who will forever have his name clowned on.</p>
+
+            <p>note from gst: bind i wouldve liked you if u wasnt so egotistical and just generally weird i felt like this had to be made</p>
+
+            <p>note from fate: hi jittleyang i made this because i just dont like council estate larps and you have a discord persona u hide behind the screen</p>
+
+            <p>This site does not contain any sort of CP, nudity or gore as it's illegal and we aren't weird. binds dox made by gst and fate will be attached below in the small chance this does get deleted.
+
+            <p><a href="the doxes" target="_blank" style="color: white;">https://doxbin.com/upload/bindmicrochipsfakecomkidlastdox https://vilebin.net/paste/bindmicrochipsfakecomkidlastdox</a></p>
+        </div>
+
+        <div class="container">
+            <div id="gallery"></div>
+        </div>
+
+        <div class="cursor"></div>
+
+        <div class="snow"></div>
+
+        <script>
+            const files = [...Array.from({
+                length: 30
+            }, (_, i) => `image${i + 1}.jpg`), ...Array.from({
+                length: 1
+            }, (_, i) => `video${i + 1}.mov`)];
+
+            const map = {
+                'image1.jpg': 'face pic (chicken nugget in his hair)',
+                'image2.jpg': 'proper council estate boss gett back',
+                'image3.jpg': 'i love cp (our little comedian)',
+                'image4.jpg': 'godly mew off',
+                'image5.jpg': 'Gyat...',
+                'image6.jpg': 'nice house mr harmful kaskar chipped',
+                'image7.jpg': 'true kkk grand master',
+                'image8.jpg': 'odd',
+                'image9.jpg': 'daily scran',
+                'image10.jpg': 'loves talking shit behind backs',
+                'image11.jpg': 'sigma stare.',
+                'image12.jpg': 'awkward stare.',
+                'image13.jpg': 'deep throating that mic',
+                'image14.jpg': 'sexy beast (dont say i didnt add ur "good pics")',
+                'image15.jpg': 'a church btw',
+                'image16.jpg': '"i actually mog you guys"',
+                'image17.jpg': 'retard',
+                'image18.jpg': 'sexy whatsapp the birds will love this one',
+                'image19.jpg': 'scruffy fuck',
+                'image20.jpg': 'nitbag',
+                'image21.jpg': 'corball',
+                'image22.jpg': 'i dont care',
+                'image23.jpg': 'tweaking about the pic',
+                'image24.jpg': 'im going to join sr1 if i get exiled',
+                'image25.jpg': 'MR HARM764 HERE',
+                'image26.jpg': 'he goes from saying hes a randy to "im really fucking known"',
+                'image27.jpg': 'time for harm',
+                'image28.jpg': 'aw.. pwease :3',
+                'image29.jpg': 'average extortion vc',
+                'image30.jpg': 'im using gorrilla botnet ggs.',
+                'video1.mov': 'sigma..',
+
+            };
+
+            const ge = document.getElementById('gallery');
+
+            files.forEach(file => {
+                const fe = document.createElement('div');
+                fe.classList.add('media-frame');
+                let mediaElement;
+
+                if (file.endsWith('.jpg')) {
+                    mediaElement = document.createElement('img');
+                    mediaElement.src = file;
+                    mediaElement.alt = file;
+                } else if (file.endsWith('.mov')) {
+                    mediaElement = document.createElement('video');
+                    mediaElement.src = file;
+                    mediaElement.controls = true;
+                }
+
+                const ce = document.createElement('div');
+                ce.classList.add('caption');
+                ce.textContent = map[file] || file;
+
+                fe.appendChild(mediaElement);
+                fe.appendChild(ce);
+                ge.appendChild(fe);
+            });
+
+            const cursor = document.querySelector(".cursor");
+            const mf = document.querySelectorAll(".media-frame");
+
+            function updateCursorPos(e) {
+                const rect = cursor.getBoundingClientRect();
+                const x = e.clientX - rect.width / 2;
+                const y = e.clientY - rect.height / 2;
+                cursor.style.left = `${Math.min(Math.max(0, x), window.innerWidth - rect.width)}px`;
+                cursor.style.top = `${Math.min(Math.max(0, y), window.innerHeight - rect.height)}px`;
+            }
+
+            document.addEventListener("mousemove", updateCursorPos);
+
+            mf.forEach(frame => {
+                frame.addEventListener("mouseenter", () => {
+                    cursor.classList.add("large");
+                });
+                frame.addEventListener("mouseleave", () => {
+                    cursor.classList.remove("large");
+                });
+            });
+
+            const container = document.querySelector('.snow');
+            let snowFlakes = [];
+
+            const create = () => {
+                const snowFlake = document.createElement('div');
+                snowFlake.classList.add('snowFlake');
+                snowFlake.style.setProperty('--x', Math.random() * window.innerWidth + 'px');
+                snowFlake.style.left = Math.random() * window.innerWidth + 'px';
+                snowFlake.style.animationDuration = (Math.random() * 5 + 5) + 's';
+                snowFlake.style.opacity = Math.random();
+                container.appendChild(snowFlake);
+                snowFlakes.push(snowFlake);
+
+                setTimeout(() => {
+                    snowFlake.remove();
+                    snowFlakes = snowFlakes.filter(flake => flake !== snowFlake);
+                }, (Math.random() * 5 + 5) * 900);
+            };
+
+            setInterval(create, 120);
+
+            window.addEventListener('scroll', () => {
+                const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                snowFlakes.forEach(flake => {
+                    flake.style.transform = `translateY(${scrollTop}px)`;
+                });
+            });
+        </script>
+        
+        <p style="font-size: 12px; color: #777;">Created by gst and fate</p>
